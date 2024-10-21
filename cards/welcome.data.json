@@ -1,21 +1,66 @@
 {
-    "cells": [
+    "title": "Hi There, I’m your data assistant!",
+    "descs": [
         {
-            "desc": "desc for: 0",
-            "title": "title for: 0"
+            "desc": "I can answer your questions about your data and provide insights."
         },
         {
-            "desc": "desc for: 1",
-            "title": "title for: 1"
-        },
-        {
-            "desc": "desc for: 2",
-            "title": "title for: 2"
-        },
-        {
-            "desc": "desc for: 3",
-            "title": "title for: 3"
+            "desc": "I am powered by MicroStrategy AI Bots, you can see the available bots below and get to know their usage."
         }
     ],
-    "title": "Hi There, Main title here"
+    "topics": [
+        {
+            "title": "Sales Bot",
+            "verb": "sales"
+        },
+        {
+            "title": "Profit Bot",
+            "verb": "profit"
+        },
+        {
+            "title": "Customer Bot",
+            "verb": "customer"
+        },
+        {
+            "title": "Product Bot",
+            "verb": "product"
+        },
+        {
+            "title": "Employee Bot",
+            "verb": "employee"
+        },
+        {
+            "title": "Order Bot",
+            "verb": "order"
+        },
+        {
+            "title": "Inventory Bot",
+            "verb": "inventory"
+        },
+        {
+            "title": "Expense Bot",
+            "verb": "expense"
+        },
+        {
+            "title": "Budget Bot",
+            "verb": "budget"
+        },
+        {
+            "title": "Forecast Bot",
+            "verb": "forecast"
+        },
+        {
+            "title": "KPI Bot",
+            "verb": "kpi"
+        },
+        {
+            "title": "Customer Service Bot",
+            "verb": "customer service"
+        }
+    ],
+    "action": {
+        "title": "View all bots",
+        "url": "https://www.microstrategy.com/"
+    },
+    "expolreText": "Or, you can explore by choosing a specific bot"
 }

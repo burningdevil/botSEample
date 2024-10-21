@@ -2,175 +2,59 @@
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
     "body": [
         {
-            "size": "large",
-            "color": "accent",
+            "size": "Large",
+            "color": "Accent",
             "isSubtle": true,
             "text": "${title}",
             "type": "TextBlock",
             "wrap": true
         },
         {
-            "columns": [
+            "items": [
                 {
-                    "width": 1
-                },
-                {
-                    "width": 1
+                    "type": "TextBlock",
+                    "$data": "${descs}",
+                    "text": "- ${desc}",
+                    "wrap": true
                 }
             ],
-            "firstRowAsHeaders": false,
-            "gridStyle": "accent",
-           
-            "rows": [
+            "type": "Container"
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
                 {
-                    "cells": [
-                        {
-                            "items": [
-                                {
-                                    "columns": [
-                                        
-                                        {
-                                            "items": [
-                                                {
-                                                    "text": "${cells[0].title}",
-                                                    "type": "TextBlock",
-                                                    "weight": "Bolder",
-                                                    "wrap": false
-                                                }
-                                            ],
-                                            "type": "Column",
-                                            "width": "auto"
-                                        }
-                                    ],
-                                    "type": "ColumnSet"
-                                },
-                                {
-                                    "text": "${cells[0].desc}",
-                                    "type": "TextBlock",
-                                    "wrap": true,
-                                    "maxLines": 5
-                                }
-                            ],
-                            "rtl": false,
-                            "spacing": "Small",
-                            "style": "emphasis",
-                            "type": "TableCell",
-                            "isVisible": "${cells[0].title != ''}"
-                        },
-                        {
-                            "items": [
-                                {
-                                    "columns": [
-                                        {
-                                            "items": [
-                                                {
-                                                    "text": "${cells[1].title}",
-                                                    "type": "TextBlock",
-                                                    "weight": "Bolder",
-                                                    "wrap": false
-                                                }
-                                            ],
-                                            "type": "Column",
-                                            "width": "auto"
-                                        }
-                                    ],
-                                    "type": "ColumnSet"
-                                },
-                                {
-                                    "text": "${cells[1].desc}",
-                                    "type": "TextBlock",
-                                    "wrap": true,
-                                    "maxLines": 5
-                                }
-                            ],
-                            "rtl": false,
-                            "spacing": "Small",
-                            "style": "emphasis",
-                            "type": "TableCell",
-                            "isVisible": "${cells[1].title != ''}"
-                        }
-                    ],
-                    "type": "TableRow"
-                },
-                {
-                    "cells": [
-                        {
-                            "items": [
-                                {
-                                    "columns": [
-                                        {
-                                            "items": [
-                                                {
-                                                    "text": "${cells[2].title}",
-                                                    "type": "TextBlock",
-                                                    "weight": "Bolder",
-                                                    "wrap": false
-                                                }
-                                            ],
-                                            "type": "Column",
-                                            "width": "auto"
-                                        }
-                                    ],
-                                    "type": "ColumnSet"
-                                },
-                                {
-                                    "text": "${cells[2].desc}",
-                                    "type": "TextBlock",
-                                    "wrap": true,
-                                    "maxLines": 5
-                                }
-                            ],
-                            "rtl": false,
-                            "spacing": "Small",
-                            "style": "emphasis",
-                            "type": "TableCell",
-                            "isVisible": "${cells[2].title != ''}"
-                        },
-                        {
-                            "items": [
-                                {
-                                    "columns": [
-                                       
-                                        {
-                                            "items": [
-                                                {
-                                                    "text": "${cells[3].title}",
-                                                    "type": "TextBlock",
-                                                    "weight": "Bolder",
-                                                    "wrap": false
-                                                }
-                                            ],
-                                            "type": "Column",
-                                            "width": "auto"
-                                        }
-                                    ],
-                                    "type": "ColumnSet"
-                                },
-                                {
-                                    "text": "${cells[3].desc}",
-                                    "type": "TextBlock",
-                                    "wrap": true,
-                                    "maxLines": 5
-                                }
-                            ],
-                            "rtl": false,
-                            "spacing": "Small",
-                            "style": "emphasis",
-                            "type": "TableCell",
-                            "isVisible": "${cells[3].title != ''}"
-                        }
-                    ],
-                    "type": "TableRow"
+                    "$data": "${topics}",
+                    "type": "Action.Submit",
+                    "title": "${title}",
+                    "data": "- ${verb}"
                 }
-            ],
-            "showGridLines": false,
-            "type": "Table",
-            "spacing": "ExtraLarge"
-        }
+            ]
+        },
+        {
+            "type": "TextBlock",
+            "text": "${expolreText}",
+            "wrap": true
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                "type": "Action.Submit",
+                "title": "${action.title}",
+                "data": {
+                    "msteams": {
+                    "type": "task/fetch"
+                    },
+                    "verb": "viewMore"
+                }
+                }
+            ] 
+          }
     ],
     "msTeams": {
         "width": "full"
     },
     "type": "AdaptiveCard",
-    "version": "1.5"
+    "version": "1.6"
 }

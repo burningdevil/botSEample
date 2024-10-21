@@ -15,6 +15,7 @@ import {
 
 // This bot's main dialog.
 import { TeamsBot } from "./teamsBot";
+// import { AdaptiveCardActionsBot } from "./teamsBotAdaptive";
 import config from "./config";
 
 // Create adapter.
@@ -67,6 +68,7 @@ const bot = new TeamsBot(userState, conversationState);
 // Create HTTP server.
 const server = restify.createServer();
 server.use(restify.plugins.bodyParser());
+server.get("/Images/*", restify.plugins.serveStatic({ directory: __dirname }));
 server.listen(process.env.port || process.env.PORT || 3978, () => {
     console.log(`\nBot Started, ${server.name} listening to ${server.url}`);
 });

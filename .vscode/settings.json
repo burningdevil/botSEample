@@ -2,10 +2,12 @@
     "debug.onTaskErrors": "abort",
     "json.schemas": [
         {
-            "fileMatch": [
-                "/aad.*.json"
-            ],
+            "fileMatch": ["/aad.*.json"],
             "schema": {}
         }
-    ]
+    ],
+    "prettier.tabWidth": 4,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "files.autoSaveDelay": 100
 }

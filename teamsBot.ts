@@ -7,7 +7,8 @@ import {
     StatePropertyAccessor,
     ActionTypes,
     MessageFactory,
-    TeamsInfo
+    TeamsInfo,
+    ActivityFactory,
 } from "botbuilder";
 import { getAllInc } from "./services/incidentService";
 import {
@@ -22,7 +23,9 @@ import {
 
 import * as ACData from "adaptivecards-templating";
 import welcomeTemplate from "./cards/welcome.json";
-import welcomeData from './cards/welcome.data.json';
+import welcomeData from "./cards/welcome.data.json";
+import botsTemplate from "./cards/details.json";
+import botsData from "./cards/details.data.json";
 
 export class TeamsBot extends TeamsActivityHandler {
     welcomeMsg: any;
@@ -36,6 +39,35 @@ export class TeamsBot extends TeamsActivityHandler {
 
         this.onMessage(async (context, next) => {
             console.log("Running with Message Activity.");
+
+            // handle card callback actions
+            const callback = context.activity.value;
+            if (callback && callback.text) {
+                switch (callback.type) {
+                    case "askQuestionAboutbot":
+                        const userCard = CardFactory.adaptiveCard(
+                            this.adaptiveCardActions()
+                        );
+                        await context.sendActivity({
+                            attachments: [userCard, userCard, userCard],
+                            attachmentLayout: "carousel",
+                        });
+                        break;
+                    case "viewallbots":
+                        // send a card with all the bots
+                        await this.sendBotsCard(context);
+                        break;
+                    case "showBotDetail":
+                        const userCard2 = CardFactory.adaptiveCard(
+                            this.SuggestedActionsCard()
+                        );
+                        await context.sendActivity({
+                            attachments: [userCard2],
+                        });
+                }
+                return;
+            }
+
             const removedMentionText = TurnContext.removeRecipientMention(
                 context.activity
             );
@@ -47,24 +79,19 @@ export class TeamsBot extends TeamsActivityHandler {
                 return;
             }
             const txt = removedMentionText.trim();
-            const count = parseInt(txt);
-
-            if (count) {
-                await this.sendWelcomeCard(context, count);
-                await next();
-                return;
-            }
 
             if (context.activity.text.includes("workflow")) {
                 await this.startIncManagement(context);
                 await next();
-                return; 
+                return;
             }
+
 
             if (context.activity.text != null) {
                 const text = context.activity.text;
-
-                if (text.includes("Card Actions")) {
+                if (text.includes("View all bots")) {
+                    await this.sendBotsCard(context);
+                } else if (text.includes("Card Actions")) {
                     const userCard = CardFactory.adaptiveCard(
                         this.adaptiveCardActions()
                     );
@@ -98,7 +125,9 @@ export class TeamsBot extends TeamsActivityHandler {
                         this.ToggleVisibleCard()
                     );
                     await context.sendActivity({ attachments: [userCard] });
-                } else if (text.includes("welcome")) {
+                } else if (text.includes("Welcomes")) {
+                    await this.sendWelcomeCard(context, 3);
+                } else if (text.includes("Welcome")) {
                     await this.sendWelcomeCard(context, 1);
                 } else {
                     await context.sendActivity(
@@ -107,7 +136,7 @@ export class TeamsBot extends TeamsActivityHandler {
                 }
             }
 
-            await this.SendDataOnCardActions(context);
+            // await this.SendDataOnCardActions(context);
 
             // By calling next() you ensure that the next BotHandler is run.
             await next();
@@ -131,11 +160,10 @@ export class TeamsBot extends TeamsActivityHandler {
         });
     }
 
-    // create welcome message
-    async sendWelcomeCard(context, count) {
-        const data = this.createWelcomeData(count);
-
-        const template = new ACData.Template(welcomeTemplate);
+    // create bots list
+    async sendBotsCard(context: TurnContext) {
+        const data = botsData;
+        const template = new ACData.Template(botsTemplate);
         const card = template.expand({
             $root: data,
         });
@@ -147,24 +175,34 @@ export class TeamsBot extends TeamsActivityHandler {
         } catch (error) {
             console.error(error);
         }
+    }
+
+    // create welcome message
+    async sendWelcomeCard(context: TurnContext, count) {
+        const data = this.createWelcomeData();
+
+        const template = new ACData.Template(welcomeTemplate);
+        const card = template.expand({
+            $root: data,
+        });
+
+        try {
+            const cards = [];
+            for (let i = 0; i < count; i++) {
+                cards.push(CardFactory.adaptiveCard(card));
+            }
+            await context.sendActivity({
+                attachments: cards,
+                attachmentLayout: "carousel",
+            });
+        } catch (error) {
+            console.error(error);
+        }
         await context.sendTraceActivity("Bot", "WELCOME Card sent", "INFO");
     }
 
-    // return cards with count of cells
-    createWelcomeData(cellCount: number) {
+    createWelcomeData() {
         return welcomeData;
-        // const cards = [];
-        // for (let i = 0; i < 4; i++) {
-        //     cards.push({
-        //         title: i >= cellCount ? "" : `title for: ${i}`,
-        //         desc: `desc for: ${i}`,
-        //     });
-        // }
-
-        // return {
-        //     title: "Hi There, Main title here",
-        //     cells: cards,
-        // };
     }
 
     /**

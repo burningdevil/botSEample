@@ -1,0 +1,70 @@
+{
+    "title": "Hi there! Here is the list of bots available to you. Select a bot below to explore more:",
+    "topics": [
+        {
+            "title": "Sales Bot",
+            "verb": "sales",
+            "tooltip": "Get insights on sales data"
+        },
+        {
+            "title": "Profit Bot",
+            "verb": "profit",
+            "tooltip": "Get insights on profit data"
+        },
+        {
+            "title": "Customer Bot",
+            "verb": "customer",
+            "tooltip": "Get insights on customer data"
+        },
+        {
+            "title": "Product Bot",
+            "verb": "product",
+            "tooltip": "Get insights on product data"
+        },
+        {
+            "title": "Employee Bot",
+            "verb": "employee",
+            "tooltip": "Get insights on customer data"
+        },
+        {
+            "title": "Order Bot",
+            "verb": "order",
+            "tooltip": "Get insights on order data"
+        },
+        {
+            "title": "Inventory Bot",
+            "verb": "inventory",
+            "tooltip": "Get insights on customer data"
+        },
+        {
+            "title": "Expense Bot",
+            "verb": "expense",
+            "tooltip": "Get insights on customer data"
+        },
+        {
+            "title": "Budget Bot",
+            "verb": "budget",
+            "tooltip": "Get insights on customer data"
+        },
+        {
+            "title": "Forecast Bot",
+            "verb": "forecast",
+            "tooltip": "Get insights on customer data"
+        },
+        {
+            "title": "KPI Bot",
+            "verb": "kpi",
+            "tooltip": "Get insights on customer data"
+        },
+        {
+            "title": "Customer Service Bot",
+            "verb": "customer service",
+            "tooltip": "Get insights on customer data"
+        }
+    ],
+    "action": {
+        "title": "View all bots",
+        "url": "https://www.microstrategy.com/"
+    },
+    "expolreText": "Or, you can explore by choosing a specific bot"
+}

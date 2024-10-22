@@ -10,57 +10,68 @@
     ],
     "topics": [
         {
-            "title": "Sales Bot",
-            "verb": "sales"
+            "title": "Sales bot's topic",
+            "verb": "sales",
+            "tooltip": "Get insights on sales data"
         },
         {
-            "title": "Profit Bot",
-            "verb": "profit"
+            "title": "Profit bot's topic",
+            "verb": "profit",
+            "tooltip": "Get insights on profit data"
         },
         {
-            "title": "Customer Bot",
-            "verb": "customer"
+            "title": "Customer bot's topic",
+            "verb": "customer",
+            "tooltip": "Get insights on customer data"
         },
         {
-            "title": "Product Bot",
-            "verb": "product"
+            "title": "Product bot's topic",
+            "verb": "product",
+            "tooltip": "Get insights on product data"
         },
         {
-            "title": "Employee Bot",
-            "verb": "employee"
+            "title": "Employee bot's topic",
+            "verb": "employee",
+            "tooltip":"Get insights on customer data"
         },
         {
-            "title": "Order Bot",
-            "verb": "order"
+            "title": "Order bot's topic",
+            "verb": "order",
+            "tooltip": "Get insights on order data"
         },
         {
-            "title": "Inventory Bot",
-            "verb": "inventory"
+            "title": "Inventory bot's topic",
+            "verb": "inventory",
+            "tooltip":"Get insights on customer data"
         },
         {
-            "title": "Expense Bot",
-            "verb": "expense"
+            "title": "Expense bot's topic",
+            "verb": "expense",
+            "tooltip":"Get insights on customer data"
         },
         {
-            "title": "Budget Bot",
-            "verb": "budget"
+            "title": "Budget bot's topic",
+            "verb": "budget",
+            "tooltip":"Get insights on customer data"
         },
         {
-            "title": "Forecast Bot",
-            "verb": "forecast"
+            "title": "Forecast bot's topic",
+            "verb": "forecast",
+            "tooltip":"Get insights on customer data"
         },
         {
-            "title": "KPI Bot",
-            "verb": "kpi"
+            "title": "KPI bot's topic",
+            "verb": "kpi",
+            "tooltip":"Get insights on customer data"
         },
         {
-            "title": "Customer Service Bot",
-            "verb": "customer service"
+            "title": "Customer Service bot's topic",
+            "verb": "customer service",
+            "tooltip":"Get insights on customer data"
         }
     ],
     "action": {
-        "title": "View all bots",
-        "url": "https://www.microstrategy.com/"
+        "title": "View all bots"
     },
     "expolreText": "Or, you can explore by choosing a specific bot"
 }

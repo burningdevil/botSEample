@@ -27,7 +27,11 @@
                     "$data": "${topics}",
                     "type": "Action.Submit",
                     "title": "${title}",
-                    "data": "- ${verb}"
+                    "data": {
+                        "text": "${verb}",
+                        "type": "askQuestionAboutbot"
+                    },
+                    "tooltip": "${tooltip}"
                 }
             ]
         },
@@ -43,10 +47,8 @@
                 "type": "Action.Submit",
                 "title": "${action.title}",
                 "data": {
-                    "msteams": {
-                    "type": "task/fetch"
-                    },
-                    "verb": "viewMore"
+                    "text": "${action.title}",
+                    "type": "viewallbots"
                 }
                 }
             ] 

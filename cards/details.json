@@ -1,0 +1,40 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "body": [
+        {
+            "text": "${title}",
+            "type": "TextBlock",
+            "wrap": true
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "$data": "${topics}",
+                    "type": "Action.ShowCard",
+                    "title": "${title}",
+                    "card": {
+                        "type": "AdaptiveCard",
+                        "body": [
+                            {
+                                "text": "${verb}",
+                                "type": "TextBlock",
+                                "color": "accent",
+                                "wrap": true
+                            }
+                        ],
+                        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                        "version": "1.6"
+                    },
+                    "mode": "primary",
+                    "tooltip": "${tooltip}"
+                }
+            ]
+        }
+    ],
+    "msTeams": {
+        "width": "full"
+    },
+    "type": "AdaptiveCard",
+    "version": "1.6"
+}

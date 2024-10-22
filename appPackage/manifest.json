@@ -36,8 +36,16 @@
                     "scopes": ["personal"],
                     "commands": [
                         {
+                            "title": "View all bots",
+                            "description": "View all bots description" 
+                        },
+                        {
                             "title": "welcome",
-                            "description": "Resend welcome card of this Bot"
+                            "description": "Begin of everything" 
+                        },
+                        {
+                            "title": "welcomes",
+                            "description": "Begin of everythings" 
                         }
                     ]
                 }

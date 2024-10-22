@@ -1,0 +1,95 @@
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "items": [
+                {
+                    "columns": [
+                        {
+                            "items": [
+                                {
+                                    "altText": "${details.title}",
+                                    "size": "Small",
+                                    "style": "Person",
+                                    "type": "Image",
+                                    "url": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
+                                    "width": "${width}",
+                                    "height": "${height}"
+                                }
+                            ],
+                            "width": "${width}",
+                            "type": "Column"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "text": "${details.title}",
+                                    "type": "TextBlock",
+                                    "weight": "Bolder",
+                                    "wrap": false
+                                }
+                            ],
+                            "type": "Column",
+                            "width": "auto"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "altText": "Certified",
+                                    "size": "Small",
+                                    "style": "Person",
+                                    "type": "Image",
+                                    "url": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
+                                    "width": "${width}",
+                                    "height": "${height}"
+                                }
+                            ],
+                            "width": "${width}",
+                            "type": "Column"
+                        }
+                    ],
+                    "type": "ColumnSet"
+                },
+                {
+                    "text": "${details.desc}",
+                    "type": "TextBlock",
+                    "wrap": true,
+                    "maxLines": 5
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "To get started, here are some topics to explore based on your bots:",
+                    "wrap": true
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "$data": "${suggests}",
+                            "type": "Action.Submit",
+                            "title": "${title}"
+                        }
+                    ]
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Or explore more with suggested questions:",
+                    "wrap": true
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "$data": "${topics}",
+                            "type": "Action.Submit",
+                            "title": "${title}"
+                        }
+                    ]
+                }
+            ],
+            "type": "Container"
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.6"
+}

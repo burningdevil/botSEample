@@ -1,6 +1,6 @@
 {
     "type": "AdaptiveCard",
-   
+
     "body": [
         {
             "items": [
@@ -21,7 +21,7 @@
                         }
                     ],
                     "id": "actions",
-                    "isVisible": false
+                    "isVisible": true
                 },
                 {
                     "type": "ActionSet",
@@ -33,7 +33,7 @@
                         }
                     ],
                     "id": "getSuggestions",
-                    "isVisible": true
+                    "isVisible": false
                 }
             ],
             "type": "Container"

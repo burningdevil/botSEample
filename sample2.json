@@ -1,0 +1,140 @@
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "items": [
+                {
+                    "columns": [
+                        {
+                            "items": [
+                                {
+                                    "altText": "${details.title}",
+                                    "size": "Small",
+                                    "style": "Person",
+                                    "type": "Image",
+                                    "url": "${certifiedImg}",
+                                    "width": "${width}",
+                                    "height": "${height}"
+                                }
+                            ],
+                            "width": "auto",
+                            "type": "Column"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "text": "${details.title}",
+                                    "type": "TextBlock",
+                                    "weight": "Bolder"
+                                }
+                            ],
+                            "type": "Column",
+                            "width": "auto"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "altText": "Certified",
+                                    "size": "Small",
+                                    "style": "Person",
+                                    "type": "Image",
+                                    "url": "${certifiedImg}",
+                                    "width": "${width}",
+                                    "height": "${height}"
+                                }
+                            ],
+                            "width": "auto",
+                            "type": "Column"
+                        }
+                    ],
+                    "type": "ColumnSet"
+                },
+                {
+                    "text": "${details.desc}",
+                    "type": "TextBlock",
+                    "wrap": true,
+                    "maxLines": 5
+                }
+            ],
+            "type": "Container"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "ActionSet",
+                            "actions": [
+                                {
+                                    "type": "Action.OpenUrl",
+                                    "title": "Action.OpenUrl"
+                                },
+                                {
+                                    "type": "Action.Submit",
+                                    "title": "Action.Submit"
+                                },
+                                {
+                                    "type": "Action.Submit",
+                                    "title": "Action.Submit"
+                                },
+                                {
+                                    "type": "Action.ShowCard",
+                                    "title": "Action.ShowCard",
+                                    "card": {
+                                        "type": "AdaptiveCard"
+                                    }
+                                },
+                                {
+                                    "type": "Action.Execute",
+                                    "title": "Action.Execute"
+                                },
+                                {
+                                    "type": "Action.ShowCard",
+                                    "title": "Action.ShowCard",
+                                    "card": {
+                                        "type": "AdaptiveCard"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "ActionSet",
+                            "actions": [
+                                {
+                                    "type": "Action.OpenUrl",
+                                    "title": "Action.OpenUrl"
+                                },
+                                {
+                                    "type": "Action.OpenUrl",
+                                    "title": "Action.OpenUrl"
+                                },
+                                {
+                                    "type": "Action.Submit",
+                                    "title": "Action.Submit"
+                                },
+                                {
+                                    "type": "Action.ShowCard",
+                                    "title": "Action.ShowCard",
+                                    "card": {
+                                        "type": "AdaptiveCard"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5"
+}

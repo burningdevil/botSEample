@@ -16,8 +16,16 @@
             "certifiedImg": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
             "width": "18px",
             "height": "18px",
-            "suggests": [{"title": "sales"}, {"title": "Budget Bot"}, {"title": "Customer Bot"}],
-            "topics": [{"title": "sales topic"}, {"title": "Budget Bot topic"}, {"title": "Customer Bot topic"}]
+            "suggests": [
+                { "title": "sales" },
+                { "title": "Budget Bot" },
+                { "title": "Customer Bot" }
+            ],
+            "topics": [
+                { "title": "sales topic" },
+                { "title": "Budget Bot topic" },
+                { "title": "Customer Bot topic" }
+            ]
         },
         {
             "title": "Profit Bot",
@@ -32,8 +40,16 @@
             "certifiedImg": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
             "width": "18px",
             "height": "18px",
-            "suggests": [{"title": "sales"}, {"title": "Budget Bot"}, {"title": "Customer Bot"}],
-            "topics": [{"title": "sales topic"}, {"title": "Budget Bot topic"}, {"title": "Customer Bot topic"}]
+            "suggests": [
+                { "title": "sales" },
+                { "title": "Budget Bot" },
+                { "title": "Customer Bot" }
+            ],
+            "topics": [
+                { "title": "sales topic" },
+                { "title": "Budget Bot topic" },
+                { "title": "Customer Bot topic" }
+            ]
         },
         {
             "title": "Customer Bot",
@@ -48,8 +64,16 @@
             "certifiedImg": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
             "width": "18px",
             "height": "18px",
-            "suggests": [{"title": "sales"}, {"title": "Budget Bot"}, {"title": "Customer Bot"}],
-            "topics": [{"title": "sales topic"}, {"title": "Budget Bot topic"}, {"title": "Customer Bot topic"}]
+            "suggests": [
+                { "title": "sales" },
+                { "title": "Budget Bot" },
+                { "title": "Customer Bot" }
+            ],
+            "topics": [
+                { "title": "sales topic" },
+                { "title": "Budget Bot topic" },
+                { "title": "Customer Bot topic" }
+            ]
         },
         {
             "title": "Product Bot",
@@ -64,8 +88,16 @@
             "certifiedImg": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
             "width": "18px",
             "height": "18px",
-            "suggests": [{"title": "sales"}, {"title": "Budget Bot"}, {"title": "Customer Bot"}],
-            "topics": [{"title": "sales topic"}, {"title": "Budget Bot topic"}, {"title": "Customer Bot topic"}]
+            "suggests": [
+                { "title": "sales" },
+                { "title": "Budget Bot" },
+                { "title": "Customer Bot" }
+            ],
+            "topics": [
+                { "title": "sales topic" },
+                { "title": "Budget Bot topic" },
+                { "title": "Customer Bot topic" }
+            ]
         },
         {
             "title": "Employee Bot",
@@ -80,8 +112,16 @@
             "certifiedImg": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
             "width": "18px",
             "height": "18px",
-            "suggests": [{"title": "sales"}, {"title": "Budget Bot"}, {"title": "Customer Bot"}],
-            "topics": [{"title": "sales topic"}, {"title": "Budget Bot topic"}, {"title": "Customer Bot topic"}]
+            "suggests": [
+                { "title": "sales" },
+                { "title": "Budget Bot" },
+                { "title": "Customer Bot" }
+            ],
+            "topics": [
+                { "title": "sales topic" },
+                { "title": "Budget Bot topic" },
+                { "title": "Customer Bot topic" }
+            ]
         },
         {
             "title": "Order Bot",
@@ -96,8 +136,16 @@
             "certifiedImg": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
             "width": "18px",
             "height": "18px",
-            "suggests": [{"title": "sales"}, {"title": "Budget Bot"}, {"title": "Customer Bot"}],
-            "topics": [{"title": "sales topic"}, {"title": "Budget Bot topic"}, {"title": "Customer Bot topic"}]
+            "suggests": [
+                { "title": "sales" },
+                { "title": "Budget Bot" },
+                { "title": "Customer Bot" }
+            ],
+            "topics": [
+                { "title": "sales topic" },
+                { "title": "Budget Bot topic" },
+                { "title": "Customer Bot topic" }
+            ]
         },
         {
             "title": "Inventory Bot",
@@ -112,8 +160,16 @@
             "certifiedImg": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
             "width": "18px",
             "height": "18px",
-            "suggests": [{"title": "sales"}, {"title": "Budget Bot"}, {"title": "Customer Bot"}],
-            "topics": [{"title": "sales topic"}, {"title": "Budget Bot topic"}, {"title": "Customer Bot topic"}]
+            "suggests": [
+                { "title": "sales" },
+                { "title": "Budget Bot" },
+                { "title": "Customer Bot" }
+            ],
+            "topics": [
+                { "title": "sales topic" },
+                { "title": "Budget Bot topic" },
+                { "title": "Customer Bot topic" }
+            ]
         },
         {
             "title": "Expense Bot",
@@ -128,8 +184,16 @@
             "certifiedImg": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
             "width": "18px",
             "height": "18px",
-            "suggests": [{"title": "sales"}, {"title": "Budget Bot"}, {"title": "Customer Bot"}],
-            "topics": [{"title": "sales topic"}, {"title": "Budget Bot topic"}, {"title": "Customer Bot topic"}]
+            "suggests": [
+                { "title": "sales" },
+                { "title": "Budget Bot" },
+                { "title": "Customer Bot" }
+            ],
+            "topics": [
+                { "title": "sales topic" },
+                { "title": "Budget Bot topic" },
+                { "title": "Customer Bot topic" }
+            ]
         },
         {
             "title": "Budget Bot",
@@ -144,8 +208,16 @@
             "certifiedImg": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
             "width": "18px",
             "height": "18px",
-            "suggests": [{"title": "sales"}, {"title": "Budget Bot"}, {"title": "Customer Bot"}],
-            "topics": [{"title": "sales topic"}, {"title": "Budget Bot topic"}, {"title": "Customer Bot topic"}]
+            "suggests": [
+                { "title": "sales" },
+                { "title": "Budget Bot" },
+                { "title": "Customer Bot" }
+            ],
+            "topics": [
+                { "title": "sales topic" },
+                { "title": "Budget Bot topic" },
+                { "title": "Customer Bot topic" }
+            ]
         },
         {
             "title": "Forecast Bot",
@@ -160,8 +232,16 @@
             "certifiedImg": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
             "width": "18px",
             "height": "18px",
-            "suggests": [{"title": "sales"}, {"title": "Budget Bot"}, {"title": "Customer Bot"}],
-            "topics": [{"title": "sales topic"}, {"title": "Budget Bot topic"}, {"title": "Customer Bot topic"}]
+            "suggests": [
+                { "title": "sales" },
+                { "title": "Budget Bot" },
+                { "title": "Customer Bot" }
+            ],
+            "topics": [
+                { "title": "sales topic" },
+                { "title": "Budget Bot topic" },
+                { "title": "Customer Bot topic" }
+            ]
         },
         {
             "title": "KPI Bot",
@@ -176,8 +256,16 @@
             "certifiedImg": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
             "width": "18px",
             "height": "18px",
-            "suggests": [{"title": "sales"}, {"title": "Budget Bot"}, {"title": "Customer Bot"}],
-            "topics": [{"title": "sales topic"}, {"title": "Budget Bot topic"}, {"title": "Customer Bot topic"}]
+            "suggests": [
+                { "title": "sales" },
+                { "title": "Budget Bot" },
+                { "title": "Customer Bot" }
+            ],
+            "topics": [
+                { "title": "sales topic" },
+                { "title": "Budget Bot topic" },
+                { "title": "Customer Bot topic" }
+            ]
         },
         {
             "title": "Customer Service Bot",
@@ -192,8 +280,16 @@
             "certifiedImg": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
             "width": "18px",
             "height": "18px",
-            "suggests": [{"title": "sales"}, {"title": "Budget Bot"}, {"title": "Customer Bot"}],
-            "topics": [{"title": "sales topic"}, {"title": "Budget Bot topic"}, {"title": "Customer Bot topic"}]
+            "suggests": [
+                { "title": "sales" },
+                { "title": "Budget Bot" },
+                { "title": "Customer Bot" }
+            ],
+            "topics": [
+                { "title": "sales topic" },
+                { "title": "Budget Bot topic" },
+                { "title": "Customer Bot topic" }
+            ]
         }
     ],
     "showTopics": true,

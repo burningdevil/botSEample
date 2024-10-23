@@ -8,7 +8,6 @@ import {
     ActionTypes,
     MessageFactory,
     TeamsInfo,
-    ActivityFactory,
 } from "botbuilder";
 import { getAllInc } from "./services/incidentService";
 import {
@@ -24,13 +23,23 @@ import {
 import * as ACData from "adaptivecards-templating";
 import welcomeTemplate from "./cards/welcome.json";
 import welcomeData from "./cards/welcome.data.json";
-import botsTemplate from "./cards/details.json";
+import showCardTeamplate from "./cards/details.json";
+import showCardTemplate2 from "./cards/details2.json";
+import visibilityTeamplate from "./cards/visibility.json";
+import visibilityData from "./cards/visibility.data.json";
+import visibilityTeamplate2 from "./cards/visibility2.json";
 import botsData from "./cards/details.data.json";
+import subTemplate from "./cards/subcard.json";
+import subTeamplate2 from './cards/subcard2.json';
+import subData from "./cards/subcard.data.json";
 
 export class TeamsBot extends TeamsActivityHandler {
     welcomeMsg: any;
     userLibraryAccessor: StatePropertyAccessor;
     conversationAccessor: StatePropertyAccessor;
+
+    // flag to use show card or visibility card
+    useShowCard = false;
 
     constructor(userState: UserState, conversationState: ConversationState) {
         super();
@@ -129,6 +138,8 @@ export class TeamsBot extends TeamsActivityHandler {
                     await this.sendWelcomeCard(context, 3);
                 } else if (text.includes("Welcome")) {
                     await this.sendWelcomeCard(context, 1);
+                } else if (text.includes("sub")) {
+                    await this.sendSubCard(context);
                 } else {
                     await context.sendActivity(
                         "Please use one of these commands: **Card Actions** for  Adaptive Card Actions, **Suggested Actions** for Bot Suggested Actions and **ToggleVisibility** for Action ToggleVisible Card **workflow** for workflow dialogs"
@@ -160,10 +171,12 @@ export class TeamsBot extends TeamsActivityHandler {
         });
     }
 
+
+
     // create bots list
     async sendBotsCard(context: TurnContext) {
-        const data = botsData;
-        const template = new ACData.Template(botsTemplate);
+        const data = this.useShowCard ? botsData : visibilityData;
+        const template = new ACData.Template(this.useShowCard ? showCardTeamplate : visibilityTeamplate);
         const card = template.expand({
             $root: data,
         });
@@ -203,6 +216,22 @@ export class TeamsBot extends TeamsActivityHandler {
 
     createWelcomeData() {
         return welcomeData;
+    }
+
+    async sendSubCard(context) {
+        const data = subData;
+        const template = new ACData.Template(subTemplate);
+        const card = template.expand({
+            $root: data,
+        });
+
+        try {
+            await context.sendActivity({
+                attachments: [CardFactory.adaptiveCard(card)],
+            });
+        } catch (error) {
+            console.error(error);
+        }
     }
 
     /**
@@ -502,16 +531,34 @@ export class TeamsBot extends TeamsActivityHandler {
 
         if (context.activity.name === "adaptiveCard/action") {
             const action = context.activity.value.action;
+            const verb = action.verb;
             console.log("Verb: ", action.verb);
-            const allMembers = await (
-                await TeamsInfo.getMembers(context)
-            ).filter((tm) => tm.aadObjectId);
-            const responseCard = await selectResponseCard(
-                context,
-                user,
-                allMembers
-            );
-            return invokeResponse(responseCard);
+            switch (verb) {
+                case "getSuggestions":
+                    let variableData = subData;
+                    let template = new ACData.Template(subTeamplate2);
+                    let card = template.expand({
+                        $root: variableData,
+                    });
+                    return invokeResponse(card);
+                case "ShowCard":
+                    let variableData2 = this.useShowCard ? botsData : visibilityData;
+                    let template2 = new ACData.Template(this.useShowCard ? showCardTemplate2 : visibilityTeamplate2);
+                    let card2 = template2.expand({
+                        $root: variableData2,
+                    });
+                    return invokeResponse(card2);
+                default:
+                    const allMembers = await (
+                        await TeamsInfo.getMembers(context)
+                    ).filter((tm) => tm.aadObjectId);
+                    const responseCard = await selectResponseCard(
+                        context,
+                        user,
+                        allMembers
+                    );
+                    return invokeResponse(responseCard);
+            }
         }
     }
 

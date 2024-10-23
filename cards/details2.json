@@ -96,9 +96,10 @@
                                         "type": "ActionSet",
                                         "actions": [
                                             {
+                                                "$data": "${topics}",
                                                 "type": "Action.Execute",
-                                                "title": "get Suggestions",
-                                                "verb": "ShowCard"
+                                                "title": "${title}",
+                                                "verb": "getSuggestions"
                                             }
                                         ]
                                     }

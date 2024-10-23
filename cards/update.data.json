@@ -1,0 +1,275 @@
+{
+    "title": "Hi there! Here is the list of bots available to you. Select a bot below to explore more:",
+    "width": "18px",
+    "height": "18px",
+    "sectitle": "Sales Bot",
+    "desc": "Sales Bot's description",
+    "suggests": [
+        { "title": "sales suggest" },
+        { "title": "Budget suggest" },
+        { "title": "Customer suggest" }
+    ],
+    "topics": [
+        { "title": "sales topic" },
+        { "title": "Budget Bot topic" },
+        { "title": "Customer Bot topic" }
+    ],
+    "bots": [
+        {
+            "title": "Sales Bot",
+            "verb": "sales",
+            "tooltip": "Get insights on sales data"
+        },
+        {
+            "title": "Profit Bot",
+            "verb": "profit",
+            "tooltip": "Get insights on profit data"
+        },
+        {
+            "title": "Customer Bot",
+            "verb": "customer",
+            "tooltip": "Get insights on customer data",
+            "details": {
+                "title": "Customer Bot's title",
+                "img": "https://cdn.pixabay.com/photo/2024/05/29/16/49/lizard-8796682_1280.jpg",
+                "desc": "Customer Bot's description",
+                "certified": true
+            },
+            "certifiedImg": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
+            "width": "18px",
+            "height": "18px",
+            "suggests": [
+                { "title": "sales" },
+                { "title": "Budget Bot" },
+                { "title": "Customer Bot" }
+            ],
+            "topics": [
+                { "title": "sales topic" },
+                { "title": "Budget Bot topic" },
+                { "title": "Customer Bot topic" }
+            ]
+        },
+        {
+            "title": "Product Bot",
+            "verb": "product",
+            "tooltip": "Get insights on product data",
+            "details": {
+                "title": "Product Bot's title",
+                "img": "https://cdn.pixabay.com/photo/2024/05/29/16/49/lizard-8796682_1280.jpg",
+                "desc": "Product Bot's description",
+                "certified": true
+            },
+            "certifiedImg": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
+            "width": "18px",
+            "height": "18px",
+            "suggests": [
+                { "title": "sales" },
+                { "title": "Budget Bot" },
+                { "title": "Customer Bot" }
+            ],
+            "topics": [
+                { "title": "sales topic" },
+                { "title": "Budget Bot topic" },
+                { "title": "Customer Bot topic" }
+            ]
+        },
+        {
+            "title": "Employee Bot",
+            "verb": "employee",
+            "tooltip": "Get insights on customer data",
+            "details": {
+                "title": "Employee Bot's title",
+                "img": "https://cdn.pixabay.com/photo/2024/05/29/16/49/lizard-8796682_1280.jpg",
+                "desc": "Employee Bot's description",
+                "certified": true
+            },
+            "certifiedImg": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
+            "width": "18px",
+            "height": "18px",
+            "suggests": [
+                { "title": "sales" },
+                { "title": "Budget Bot" },
+                { "title": "Customer Bot" }
+            ],
+            "topics": [
+                { "title": "sales topic" },
+                { "title": "Budget Bot topic" },
+                { "title": "Customer Bot topic" }
+            ]
+        },
+        {
+            "title": "Order Bot",
+            "verb": "order",
+            "tooltip": "Get insights on order data",
+            "details": {
+                "title": "Order Bot's title",
+                "img": "https://cdn.pixabay.com/photo/2024/05/29/16/49/lizard-8796682_1280.jpg",
+                "desc": "Order Bot's description",
+                "certified": true
+            },
+            "certifiedImg": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
+            "width": "18px",
+            "height": "18px",
+            "suggests": [
+                { "title": "sales" },
+                { "title": "Budget Bot" },
+                { "title": "Customer Bot" }
+            ],
+            "topics": [
+                { "title": "sales topic" },
+                { "title": "Budget Bot topic" },
+                { "title": "Customer Bot topic" }
+            ]
+        },
+        {
+            "title": "Inventory Bot",
+            "verb": "inventory",
+            "tooltip": "Get insights on customer data",
+            "details": {
+                "title": "Inventory Bot's title",
+                "img": "https://cdn.pixabay.com/photo/2024/05/29/16/49/lizard-8796682_1280.jpg",
+                "desc": "Inventory Bot's description",
+                "certified": true
+            },
+            "certifiedImg": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
+            "width": "18px",
+            "height": "18px",
+            "suggests": [
+                { "title": "sales" },
+                { "title": "Budget Bot" },
+                { "title": "Customer Bot" }
+            ],
+            "topics": [
+                { "title": "sales topic" },
+                { "title": "Budget Bot topic" },
+                { "title": "Customer Bot topic" }
+            ]
+        },
+        {
+            "title": "Expense Bot",
+            "verb": "expense",
+            "tooltip": "Get insights on customer data",
+            "details": {
+                "title": "Expense Bot's title",
+                "img": "https://cdn.pixabay.com/photo/2024/05/29/16/49/lizard-8796682_1280.jpg",
+                "desc": "Expense Bot's description",
+                "certified": true
+            },
+            "certifiedImg": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
+            "width": "18px",
+            "height": "18px",
+            "suggests": [
+                { "title": "sales" },
+                { "title": "Budget Bot" },
+                { "title": "Customer Bot" }
+            ],
+            "topics": [
+                { "title": "sales topic" },
+                { "title": "Budget Bot topic" },
+                { "title": "Customer Bot topic" }
+            ]
+        },
+        {
+            "title": "Budget Bot",
+            "verb": "budget",
+            "tooltip": "Get insights on customer data",
+            "details": {
+                "title": "Budget Bot's title",
+                "img": "https://cdn.pixabay.com/photo/2024/05/29/16/49/lizard-8796682_1280.jpg",
+                "desc": "Budget Bot's description",
+                "certified": true
+            },
+            "certifiedImg": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
+            "width": "18px",
+            "height": "18px",
+            "suggests": [
+                { "title": "sales" },
+                { "title": "Budget Bot" },
+                { "title": "Customer Bot" }
+            ],
+            "topics": [
+                { "title": "sales topic" },
+                { "title": "Budget Bot topic" },
+                { "title": "Customer Bot topic" }
+            ]
+        },
+        {
+            "title": "Forecast Bot",
+            "verb": "forecast",
+            "tooltip": "Get insights on customer data",
+            "details": {
+                "title": "Forecast Bot's title",
+                "img": "https://cdn.pixabay.com/photo/2024/05/29/16/49/lizard-8796682_1280.jpg",
+                "desc": "Forecast Bot's description",
+                "certified": true
+            },
+            "certifiedImg": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
+            "width": "18px",
+            "height": "18px",
+            "suggests": [
+                { "title": "sales" },
+                { "title": "Budget Bot" },
+                { "title": "Customer Bot" }
+            ],
+            "topics": [
+                { "title": "sales topic" },
+                { "title": "Budget Bot topic" },
+                { "title": "Customer Bot topic" }
+            ]
+        },
+        {
+            "title": "KPI Bot",
+            "verb": "kpi",
+            "tooltip": "Get insights on customer data",
+            "details": {
+                "title": "KPI Bot's title",
+                "img": "https://cdn.pixabay.com/photo/2024/05/29/16/49/lizard-8796682_1280.jpg",
+                "desc": "KPI Bot's description",
+                "certified": true
+            },
+            "certifiedImg": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
+            "width": "18px",
+            "height": "18px",
+            "suggests": [
+                { "title": "sales" },
+                { "title": "Budget Bot" },
+                { "title": "Customer Bot" }
+            ],
+            "topics": [
+                { "title": "sales topic" },
+                { "title": "Budget Bot topic" },
+                { "title": "Customer Bot topic" }
+            ]
+        },
+        {
+            "title": "Customer Service Bot",
+            "verb": "customer service",
+            "tooltip": "Get insights on customer data",
+            "details": {
+                "title": "Customer Service Bot's title",
+                "img": "https://cdn.pixabay.com/photo/2024/05/29/16/49/lizard-8796682_1280.jpg",
+                "desc": "Customer Service Bot's description",
+                "certified": true
+            },
+            "certifiedImg": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
+            "width": "18px",
+            "height": "18px",
+            "suggests": [
+                { "title": "sales" },
+                { "title": "Budget Bot" },
+                { "title": "Customer Bot" }
+            ],
+            "topics": [
+                { "title": "sales topic" },
+                { "title": "Budget Bot topic" },
+                { "title": "Customer Bot topic" }
+            ]
+        }
+    ],
+    "showTopics": true,
+    "action": {
+        "title": "View all bots",
+        "url": "https://www.microstrategy.com/"
+    },
+    "expolreText": "Or, you can explore by choosing a specific bot"
+}

@@ -37,15 +37,27 @@
                     "commands": [
                         {
                             "title": "View all bots",
-                            "description": "View all bots description" 
+                            "description": "View all bots description"
                         },
                         {
                             "title": "welcome",
-                            "description": "Begin of everything" 
+                            "description": "Begin of everything"
                         },
                         {
                             "title": "welcomes",
-                            "description": "Begin of everythings" 
+                            "description": "Begin of everythings"
+                        },
+                        {
+                            "title": "show card",
+                            "description": "Use show card to display a card"
+                        },
+                        {
+                            "title": "visibility",
+                            "description": "Use ToggleVisibility to display a card "
+                        },
+                        {
+                            "title": "update",
+                            "description": "update the card when tapped"
                         }
                     ]
                 }

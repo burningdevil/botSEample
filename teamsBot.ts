@@ -25,13 +25,16 @@ import welcomeTemplate from "./cards/welcome.json";
 import welcomeData from "./cards/welcome.data.json";
 import showCardTeamplate from "./cards/details.json";
 import showCardTemplate2 from "./cards/details2.json";
+import showCardData from "./cards/details.data.json";
 import visibilityTeamplate from "./cards/visibility.json";
 import visibilityData from "./cards/visibility.data.json";
 import visibilityTeamplate2 from "./cards/visibility2.json";
-import botsData from "./cards/details.data.json";
 import subTemplate from "./cards/subcard.json";
-import subTeamplate2 from './cards/subcard2.json';
+import subTeamplate2 from "./cards/subcard2.json";
 import subData from "./cards/subcard.data.json";
+import updateTemplate from "./cards/update.json";
+import updateTemplate2 from "./cards/update2.json";
+import updateData from "./cards/update.data.json";
 
 export class TeamsBot extends TeamsActivityHandler {
     welcomeMsg: any;
@@ -39,7 +42,7 @@ export class TeamsBot extends TeamsActivityHandler {
     conversationAccessor: StatePropertyAccessor;
 
     // flag to use show card or visibility card
-    useShowCard = false;
+    flag = "";
 
     constructor(userState: UserState, conversationState: ConversationState) {
         super();
@@ -95,7 +98,6 @@ export class TeamsBot extends TeamsActivityHandler {
                 return;
             }
 
-
             if (context.activity.text != null) {
                 const text = context.activity.text;
                 if (text.includes("View all bots")) {
@@ -140,6 +142,15 @@ export class TeamsBot extends TeamsActivityHandler {
                     await this.sendWelcomeCard(context, 1);
                 } else if (text.includes("sub")) {
                     await this.sendSubCard(context);
+                } else if (text.includes("show card")) {
+                    this.flag = "showCard";
+                    await this.sendBotsCard(context);
+                } else if (text.includes("visibility")) {
+                    this.flag = "visibility";
+                    await this.sendBotsCard(context);
+                } else if (text.includes("update")) {
+                    this.flag = "update";
+                    await this.sendBotsCard(context);
                 } else {
                     await context.sendActivity(
                         "Please use one of these commands: **Card Actions** for  Adaptive Card Actions, **Suggested Actions** for Bot Suggested Actions and **ToggleVisibility** for Action ToggleVisible Card **workflow** for workflow dialogs"
@@ -171,12 +182,36 @@ export class TeamsBot extends TeamsActivityHandler {
         });
     }
 
+    getTeamplate(updated?: boolean) {
+        switch (this.flag) {
+            case "showCard":
+                return updated ? showCardTemplate2 : showCardTeamplate;
+            case "visibility":
+                return updated ? visibilityTeamplate2 : visibilityTeamplate;
+            case "update":
+                return updated ? updateTemplate2 : updateTemplate;
+            default:
+                return updated ? updateTemplate2 : updateTemplate;
+        }
+    }
 
+    getData(update?: boolean) {
+        switch (this.flag) {
+            case "showCard":
+                return showCardData;
+            case "visibility":
+                return visibilityData;
+            case "update":
+                return updateData;
+            default:
+                return updateData;
+        }
+    }
 
     // create bots list
     async sendBotsCard(context: TurnContext) {
-        const data = this.useShowCard ? botsData : visibilityData;
-        const template = new ACData.Template(this.useShowCard ? showCardTeamplate : visibilityTeamplate);
+        const data = this.getData();
+        const template = new ACData.Template(this.getTeamplate());
         const card = template.expand({
             $root: data,
         });
@@ -542,8 +577,10 @@ export class TeamsBot extends TeamsActivityHandler {
                     });
                     return invokeResponse(card);
                 case "ShowCard":
-                    let variableData2 = this.useShowCard ? botsData : visibilityData;
-                    let template2 = new ACData.Template(this.useShowCard ? showCardTemplate2 : visibilityTeamplate2);
+                    let variableData2 = this.getData();
+                    let template2 = new ACData.Template(
+                        this.getTeamplate(true)
+                    );
                     let card2 = template2.expand({
                         $root: variableData2,
                     });

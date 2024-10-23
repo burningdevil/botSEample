@@ -142,13 +142,13 @@ export class TeamsBot extends TeamsActivityHandler {
                     await this.sendWelcomeCard(context, 1);
                 } else if (text.includes("sub")) {
                     await this.sendSubCard(context);
-                } else if (text.includes("show card")) {
+                } else if (text.includes("Show card")) {
                     this.flag = "showCard";
                     await this.sendBotsCard(context);
-                } else if (text.includes("visibility")) {
+                } else if (text.includes("Visibility")) {
                     this.flag = "visibility";
                     await this.sendBotsCard(context);
-                } else if (text.includes("update")) {
+                } else if (text.includes("Update")) {
                     this.flag = "update";
                     await this.sendBotsCard(context);
                 } else {
